@@ -19,5 +19,12 @@
 		"svelte-check": "^4.0.0",
 		"typescript": "^5.0.0",
 		"vite": "^6.2.5"
+	},
+	"dependencies": {
+		"@revolist/revogrid": "^4.15.5",
+		"@revolist/svelte-datagrid": "^4.15.5",
+		"@stencil/store": "^2.1.2",
+		"@types/lodash": "^4.17.16",
+		"lodash": "^4.17.21"
 	}
 }

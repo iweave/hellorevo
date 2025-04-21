@@ -1,2 +1,30 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+    import { RevoGrid, type ColumnRegular } from '@revolist/svelte-datagrid';
+    const source = [
+    {
+      name: '1',
+      details: 'Item 1',
+    },
+    {
+      name: '2',
+      details: 'Item 2',
+    },
+  ];
+    const columns: ColumnRegular[] = [
+    {
+      prop: 'name',
+      name: 'First',
+      cellTemplate(h, { value }) {
+        return h('span', { style: { background: 'red' } }, value);
+      }
+    },
+    {
+      prop: 'details',
+      name: 'Second',
+    },
+  ];
+</script>
+
+<main>
+	<RevoGrid {source} {columns}></RevoGrid>
+</main>
